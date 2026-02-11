@@ -18,104 +18,256 @@ void printStarSymmattry(int n)
         cout << endl;
     }
 }
-
 void printIncVerStar(int n)
 {
-    /*  
+    /*
      *
      **
      ***
      ****
      */
-    for(int i=1; i<=n; i++)
+    for (int i = 1; i <= n; i++)
     {
-        for(int j=0; j<i; j++){
-            cout<<"* ";
+        for (int j = 0; j < i; j++)
+        {
+            cout << "* ";
         }
-        cout<< endl;
+        cout << endl;
     }
 }
-
-void printIncNumVer(int n){
-    /*  
+void printIncNumVer(int n)
+{
+    /*
      1
      12
      123
      1234
      */
-    for(int i=1; i<=n;i++){
-        for(int j=1; j<=i;j++){
-            cout<<j<<" ";
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            cout << j << " ";
         }
-        cout<< endl;
+        cout << endl;
     }
 }
-
-void printSameNumVer(int n){
-    /*  
+void printSameNumVer(int n)
+{
+    /*
      1
      22
      333
      4444
      */
-    for(int i=1; i<=n;i++){
-        for(int j=1;j<=i;j++){
-            cout<<i<<" ";
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            cout << i << " ";
         }
-        cout<< endl;
+        cout << endl;
     }
 }
-
-void printDecVerStar(int n){
+void printDecVerStar(int n)
+{
     /*
-    * * * * 
-    * * * 
-    * * 
-    * 
-    */
-    for(int i=n; i>0;i--){
-        for(int j=i; j>0;j--){
-            cout<<"* ";
+     * * * *
+     * * *
+     * *
+     *
+     */
+    for (int i = n; i > 0; i--)
+    {
+        for (int j = i; j > 0; j--)
+        {
+            cout << "* ";
         }
-        cout<< endl;
+        cout << endl;
     }
 }
-
-void printDecVerNum(int n){
+void printDecVerNum(int n)
+{
     /*
-    1 2 3 4 5 6 7 
-    1 2 3 4 5 6 
-    1 2 3 4 5 
-    1 2 3 4 
-    1 2 3 
-    1 2 
-    1 
+    1 2 3 4 5 6 7
+    1 2 3 4 5 6
+    1 2 3 4 5
+    1 2 3 4
+    1 2 3
+    1 2
+    1
     */
-    for(int i=n; i>0;i--){
-        for(int j=1; j<=i;j++){
-            cout<<j<< " ";
+    for (int i = n; i > 0; i--)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            cout << j << " ";
         }
-        cout<< endl;
+        cout << endl;
     }
 }
-void prinIncNumHorCen(int n){
-    for(int i=1; i<=n; i++){
-        for(int j=1; j<=i;j++){
-            cout<<"* ";
+void prinIncNumHorCen(int n)
+{
+    /*
+     *
+     ***
+     *****
+     *******
+     *********
+     */
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = n - i; j >= 1; j--)
+        {
+            cout << " ";
         }
-        cout<< endl;
+        for (int k = 1; k <= 2 * i - 1; k++)
+        {
+            cout << "*";
+        }
+        for (int l = n - i; l >= 1; l--)
+        {
+            cout << " ";
+        }
+        cout << endl;
+    }
+}
+void prinDecNumHorCen(int n)
+{
+
+    for (int i = n; i >= 1; i--)
+    {
+        for (int j = 1; j <= n - i; j++)
+        {
+            cout << " ";
+        }
+        for (int k = 2 * i - 1; k >= 1; k--)
+        {
+            cout << "*";
+        }
+        for (int l = 1; l <= n - i; l++)
+        {
+            cout << " ";
+        }
+        cout << endl;
+    }
+}
+void printIncDecSumHorCen(int n)
+{
+    /*
+     *
+     ***
+     *****
+     *******
+     *********
+     *********
+     *******
+     *****
+     ***
+     *
+     */
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = n - i; j >= 1; j--)
+        {
+            cout << " ";
+        }
+        for (int j = 1; j <= 2 * i - 1; j++)
+        {
+            cout << "*";
+        }
+        for (int j = n - i; j >= 1; j--)
+        {
+            cout << " ";
+        }
+        cout << endl;
+    }
+    for (int i = n; i >= 1; i--)
+    {
+        for (int j = 1; j <= n - i; j++)
+        {
+            cout << " ";
+        }
+        for (int j = 2 * i - 1; j >= 1; j--)
+        {
+            cout << "*";
+        }
+        for (int j = 1; j <= n - i; j++)
+        {
+            cout << " ";
+        }
+        cout << endl;
+    }
+}
+void halfVerIncDecPattern(int n)
+{
+    /*
+     *
+     **
+     ***
+     ****
+     *****
+     ****
+     ***
+     **
+     *
+     */
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+    for (int i = n - 1; i >= 1; i--)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
+void halfVerIncDecPattern2(int n)
+{
+    /*
+     *
+     **
+     ***
+     ****
+     *****
+     ****
+     ***
+     **
+     *
+     */
+    for (int i = 1; i <= 2 * n + 1; i++)
+    {
+        int star = i;
+        if (i > n)
+            star = 2 * n - i;
+        for (int j = 1; j <= star; j++)
+        {
+            cout << "*";
+        }
+        cout << endl;
     }
 }
 int main()
 {
     int n;
     cin >> n;
-    printStarSymmattry(n);
-    printIncVerStar(n);
-    printIncNumVer(n);
-    printSameNumVer(n);
-    printDecVerStar(n);
-    printDecVerNum(n);
-    prinIncNumHorCen(n);
+    // printStarSymmattry(n);
+    // printIncVerStar(n);
+    // printIncNumVer(n);
+    // printSameNumVer(n);
+    // printDecVerStar(n);
+    // printDecVerNum(n);
+    // prinIncNumHorCen(n);
+    // prinDecNumHorCen(n);
+    // printIncDecSumHorCen(n);
+    // halfVerIncDecPattern(n);
+    halfVerIncDecPattern2(n);
     return 0;
 }
