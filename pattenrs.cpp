@@ -242,7 +242,7 @@ void halfVerIncDecPattern2(int n)
      **
      *
      */
-    for (int i = 1; i <= 2 * n + 1; i++)
+    for (int i = 1; i <= 2 * n - 1; i++)
     {
         int star = i;
         if (i > n)
@@ -254,6 +254,44 @@ void halfVerIncDecPattern2(int n)
         cout << endl;
     }
 }
+void alterBinNumIncVertPattern(int n)
+{
+    /*
+    1
+    01
+    101
+    0101
+    10101
+    010101
+    1010101
+    */
+    for (int i = 1; i <= n; i++)
+    {
+        if (i % 2 == 0)
+        {
+            for (int j = 1; j <= i; j++)
+            {
+                if (j % 2 == 0)
+                    cout << "1";
+                else
+                    cout << "0";
+            }
+            cout << endl;
+        }
+        else
+        {
+            for (int j = 1; j <= i; j++)
+            {
+                if (j % 2 == 0)
+                    cout << "0";
+                else
+                    cout << "1";
+            }
+            cout << endl;
+        }
+    }
+}
+
 int main()
 {
     int n;
@@ -268,6 +306,7 @@ int main()
     // prinDecNumHorCen(n);
     // printIncDecSumHorCen(n);
     // halfVerIncDecPattern(n);
-    halfVerIncDecPattern2(n);
+    // halfVerIncDecPattern2(n);
+    alterBinNumIncVertPattern(n);
     return 0;
 }
