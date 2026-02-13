@@ -291,22 +291,57 @@ void alterBinNumIncVertPattern(int n)
         }
     }
 }
-
+void incNumPatternHorWithGap(int n)
+{
+    int emptyCount = n;
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            cout << j;
+        }
+        for (int k = 2 * (emptyCount - 1); k > 1; k--)
+        {
+            cout << " ";
+        }
+        for (int l = i; l >= 1; l--)
+        {
+            cout << l;
+        }
+        cout << endl;
+        emptyCount--;
+    }
+}
+void incNumHorVertCorrosponding(int n)
+{
+    int num = 1;
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            cout << num << " ";
+            num++;
+        }
+        cout << endl;
+    }
+}
 int main()
 {
     int n;
     cin >> n;
-    // printStarSymmattry(n);
-    // printIncVerStar(n);
-    // printIncNumVer(n);
-    // printSameNumVer(n);
-    // printDecVerStar(n);
-    // printDecVerNum(n);
-    // prinIncNumHorCen(n);
-    // prinDecNumHorCen(n);
-    // printIncDecSumHorCen(n);
-    // halfVerIncDecPattern(n);
-    // halfVerIncDecPattern2(n);
+    printStarSymmattry(n);
+    printIncVerStar(n);
+    printIncNumVer(n);
+    printSameNumVer(n);
+    printDecVerStar(n);
+    printDecVerNum(n);
+    prinIncNumHorCen(n);
+    prinDecNumHorCen(n);
+    printIncDecSumHorCen(n);
+    halfVerIncDecPattern(n);
+    halfVerIncDecPattern2(n);
     alterBinNumIncVertPattern(n);
+    incNumPatternHorWithGap(n);
+    incNumHorVertCorrosponding(n);
     return 0;
 }
