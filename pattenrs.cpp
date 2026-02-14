@@ -293,6 +293,13 @@ void alterBinNumIncVertPattern(int n)
 }
 void incNumPatternHorWithGap(int n)
 {
+    /*
+    1       1
+    12     21
+    123   321
+    1234 4321
+    1234554321
+    */
     int emptyCount = n;
     for (int i = 1; i <= n; i++)
     {
@@ -314,6 +321,13 @@ void incNumPatternHorWithGap(int n)
 }
 void incNumHorVertCorrosponding(int n)
 {
+    /*
+    1
+    2 3
+    4 5 6
+    7 8 9 10
+    11 12 13 14 15
+    */
     int num = 1;
     for (int i = 1; i <= n; i++)
     {
@@ -325,6 +339,163 @@ void incNumHorVertCorrosponding(int n)
         cout << endl;
     }
 }
+void incAlphebaticHor(int n)
+{
+    /*
+    A
+    AB
+    ABC
+    ABCD
+    ABCDE
+    */
+    for (int i = 1; i <= n; i++)
+    {
+        char ch = 'A';
+        for (int j = 1; j <= i; j++)
+        {
+            cout << ch;
+            ch++;
+        }
+        cout << endl;
+    }
+}
+void incAlphabeticHorDecVer(int n)
+{
+    /*
+    ABCDE
+    ABCD
+    ABC
+    AB
+    A
+    */
+    for (int i = 1; i <= n; i++)
+    {
+        char ch = 'A';
+        for (int j = n; j >= i; j--)
+        {
+            cout << ch;
+            ch++;
+        }
+        cout << endl;
+    }
+}
+void incAlphabeticVer(int n)
+{
+    /*
+    A
+    BB
+    CCC
+    DDDD
+    EEEEE
+    */
+    char ch = 'A';
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            cout << ch;
+        }
+        ch++;
+        cout << endl;
+    }
+}
+void incHalfDecAlphabeticHor(int n)
+{
+    /*
+        A
+       ABA
+      ABCBA
+     ABCDCBA
+    ABCDEDCBA
+    */
+    for (int i = 1; i <= n; i++)
+    {
+        char ch = 'A';
+        for (int k = i; k < n; k++)
+        {
+            cout << " ";
+        }
+        for (int j = 1; j <= 2 * i - 1; j++)
+        {
+            cout << ch;
+            if (j < i)
+                ch++;
+            else
+                ch--;
+        }
+        cout << endl;
+    }
+}
+void decAlphabeticVer(int n)
+{
+    /*
+    E
+    D E
+    C D E
+    B C D E
+    A B C D E
+    */
+    char ch = 'A' + n - 1;
+    for (int i = 1; i <= n; i++)
+    {
+        char chr = ch;
+        for (int j = 1; j <= i; j++)
+        {
+            cout << chr << " ";
+            chr++;
+        }
+        ch--;
+        cout << endl;
+    }
+}
+void decIncStarPatternRound(int n)
+{
+    /*
+    **********
+    ****  ****
+    ***    ***
+    **      **
+    *        *
+    *        *
+    **      **
+    ***    ***
+    ****  ****
+    **********
+    */
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = n; j >= i; j--)
+        {
+            cout << "*";
+        }
+        for (int k = 1; k < 2 * i - 1; k++)
+        {
+            cout << " ";
+        }
+        for (int l = n; l >= i; l--)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            cout << "*";
+        }
+        for (int k = 2 * n; k > 2 * i; k--)
+        {
+            cout << " ";
+        }
+        for (int l = 1; l <= i; l++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
+
 int main()
 {
     int n;
@@ -343,5 +514,12 @@ int main()
     alterBinNumIncVertPattern(n);
     incNumPatternHorWithGap(n);
     incNumHorVertCorrosponding(n);
+    incAlphebaticHor(n);
+    incAlphabeticHorDecVer(n);
+    incAlphabeticVer(n);
+    incHalfDecAlphabeticHor(n);
+    decAlphabeticVer(n);
+    decIncStarPatternRound(n);
+
     return 0;
 }
