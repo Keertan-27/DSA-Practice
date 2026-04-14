@@ -495,31 +495,69 @@ void decIncStarPatternRound(int n)
         cout << endl;
     }
 }
-
+void incDecStarPatternButterfly(int n)
+{
+    for (int i = 1; i <= 2 * n - 1; i++)
+    {
+        if (n >= i)
+        {
+            for (int j = 1; j <= i; j++)
+            {
+                cout << "*";
+            }
+            for (int k = 2*n; k > 2*i; k--)
+            {
+                cout << " ";
+            }
+            for (int j = 1; j <= i; j++)
+            {
+                cout << "*";
+            }
+            cout << endl;
+        }
+        else
+        {
+            for (int j = 1; j <= 2*n-i; j++)
+            {
+                cout << "*";
+            }
+            for (int k = 1; k <= 2*(i - n); k++)
+            {
+                cout << " ";
+            }
+            for (int j = 1; j <= 2*n-i; j++)
+            {
+                cout << "*";
+            }
+            cout << endl;
+        }
+    }
+}
 int main()
 {
     int n;
     cin >> n;
-    printStarSymmattry(n);
-    printIncVerStar(n);
-    printIncNumVer(n);
-    printSameNumVer(n);
-    printDecVerStar(n);
-    printDecVerNum(n);
-    prinIncNumHorCen(n);
-    prinDecNumHorCen(n);
-    printIncDecSumHorCen(n);
-    halfVerIncDecPattern(n);
-    halfVerIncDecPattern2(n);
-    alterBinNumIncVertPattern(n);
-    incNumPatternHorWithGap(n);
-    incNumHorVertCorrosponding(n);
-    incAlphebaticHor(n);
-    incAlphabeticHorDecVer(n);
-    incAlphabeticVer(n);
-    incHalfDecAlphabeticHor(n);
-    decAlphabeticVer(n);
-    decIncStarPatternRound(n);
+    // printStarSymmattry(n);
+    // printIncVerStar(n);
+    // printIncNumVer(n);
+    // printSameNumVer(n);
+    // printDecVerStar(n);
+    // printDecVerNum(n);
+    // prinIncNumHorCen(n);
+    // prinDecNumHorCen(n);
+    // printIncDecSumHorCen(n);
+    // halfVerIncDecPattern(n);
+    // halfVerIncDecPattern2(n);
+    // alterBinNumIncVertPattern(n);
+    // incNumPatternHorWithGap(n);
+    // incNumHorVertCorrosponding(n);
+    // incAlphebaticHor(n);
+    // incAlphabeticHorDecVer(n);
+    // incAlphabeticVer(n);
+    // incHalfDecAlphabeticHor(n);
+    // decAlphabeticVer(n);
+    // decIncStarPatternRound(n);
+    incDecStarPatternButterfly(n);
 
     return 0;
 }
