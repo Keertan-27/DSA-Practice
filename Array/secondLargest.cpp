@@ -43,10 +43,30 @@ int findSecondlargest(int arr[], int n)
     return secondlarge;
 }
 
+int findSecondSmall(int arr[], int n)
+{
+    int smallest = arr[0];
+    int secondsmall = INT_MAX;
+
+    for (int i = 0; i < n; i++)
+    {
+        if (arr[i] < smallest)
+        {
+            secondsmall = smallest;
+            smallest = arr[i];
+        }
+        else if (arr[i] != smallest && arr[i] < secondsmall)
+        {
+            secondsmall = arr[i];
+        }
+    }
+    return secondsmall;
+}
+
 int main()
 {
-    int arr[6] = {3, 5, 9, 6, 5, 7};
-    cout << findSecondlargestBetter(arr, 6) << endl;
-    cout << findSecondlargest(arr, 6) << endl;
+    int arr[10] = {3, 5, 9, 6, 5, 7, 10, 20, 1, 2};
+    cout << findSecondlargest(arr, 10) << endl;
+    cout << findSecondSmall(arr, 10) << endl;
     return 0;
 }
