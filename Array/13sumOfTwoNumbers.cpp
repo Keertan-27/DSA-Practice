@@ -1,8 +1,9 @@
 #include<iostream>
 #include<vector>
 #include<map>
+#include<algorithm>
 using namespace std;
-
+// for returning bool as well as indexes we can use this
 pair<int,int> sumOfTwoNumbersWithValueBetter(vector<int> a, int k)
 {
     map<int, int> valueMapping;
@@ -13,7 +14,6 @@ pair<int,int> sumOfTwoNumbersWithValueBetter(vector<int> a, int k)
         
         if (valueMapping.find(remValue) != valueMapping.end())
         {
-            cout<< "True";
             return {valueMapping[remValue] +1, i+1};
         }
 
@@ -21,7 +21,25 @@ pair<int,int> sumOfTwoNumbersWithValueBetter(vector<int> a, int k)
     }
     return {-1,-1};
 }
-
+// only to return bool 
+void sumOfTwoNumbersWithValueTwoPointer(vector<int> a, int k){
+    int n = a.size();
+    int i = 0;
+    int j = n - 1;
+    sort(a.begin(), a.end());
+    while (i < j)
+    {
+        int sum = a[i] + a[j];
+        if (sum == k)
+        {
+            cout << "Yes";
+            return;
+        }
+        else if (sum > k) j--;
+        else i++;
+    }
+    cout << "No";
+}
 int main()
 {
     vector<int> arr = {2,5,6,7,8,2};
@@ -32,6 +50,9 @@ int main()
         cout<< "True: "<< ans.first << " "<< ans.second;
     else
         cout<<"False";
+
+    cout<< endl;
+    sumOfTwoNumbersWithValueTwoPointer(arr,k);
 
     return 0;
 }
