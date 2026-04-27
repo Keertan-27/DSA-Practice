@@ -10,12 +10,12 @@ int linearSearch(int arr[], int n, int num)
             return i+1;
         }
     }
-    return -1;   
+    return -1;
 }
 
 int main()
 {
-    int num = 5;
+    int num = 2;
     int arr[6] = {1,4,6,7,5,8};
     cout<< linearSearch(arr, 6, num) << endl;
     return 0;
