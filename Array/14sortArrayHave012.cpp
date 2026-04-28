@@ -33,24 +33,25 @@ vector<int> sortArrayHavezerosoncetwosBetter(vector<int> a)
 // |     |      |     |       |      |      |     |
 // 0   low-1   low  mid-1    mid   high  high+1  n-1
 
-vector <int> sortArrayHavezerosoncetwosoptimal(vector<int> a)
+vector<int> sortArrayHavezerosoncetwosoptimal(vector<int> a)
 {
     int n = a.size();
-    int low =0, mid = 0;
-    int high = n-1;
+    int low = 0, mid = 0;
+    int high = n - 1;
 
-    while (mid<=high)
+    while (mid <= high)
     {
-        if(a[mid] == 0){
-            swap(a[mid],a[low]);
+        if (a[mid] == 0)
+        {
+            swap(a[mid], a[low]);
             low++;
             mid++;
         }
-        else if (a[mid] ==1)
+        else if (a[mid] == 1)
         {
             mid++;
         }
-        else if (a[mid] ==2)
+        else if (a[mid] == 2)
         {
             swap(a[mid], a[high]);
             high--;
@@ -63,8 +64,9 @@ int main()
     vector<int> arr = {0, 1, 0, 1, 2, 1, 2, 1, 2, 0, 1, 2};
 
     vector<int> ans = sortArrayHavezerosoncetwosoptimal(arr);
-    for(int it:ans){
-        cout<< it;
+    for (int it : ans)
+    {
+        cout << it;
     }
 
     return 0;
