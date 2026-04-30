@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-// Buy and sell stock for max profit (we can only sell after buying the stock)
+// Next Permutation In Array 
 vector<int> nextPermutationArray(vector<int> a)
 {
     int index = -1;
