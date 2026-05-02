@@ -80,7 +80,7 @@ int longestConsecutiveCountOptimal(vector<int> a)
     return longest;
 }
 
-    int main()
+int main()
     {
         vector<int> arr = {4, 3, 2, 1};
         vector<int> arr1 = {100, 102, 100, 101, 103, 1, 1, 4, 4, 2, 2, 3};
