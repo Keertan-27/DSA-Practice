@@ -95,6 +95,8 @@ vector<vector<int>> setZeroTwoDArrayBetter(vector<vector<int>> matrix, int n, in
 
 vector<vector<int>> setZeroTwoDArrayOptimal(vector<vector<int>> matrix, int n, int m)
 {
+    // int col[m] = [0][..]
+    // int row[n] = [..][0]
     int col0 = 1;
 
     for (int i = 0; i < n; i++)
