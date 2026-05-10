@@ -25,7 +25,7 @@ int mergefun(vector<int>& arr, int low, int mid, int high)
     vector<int> temp;
     while (left<=mid && right<=high)
     {
-        if (arr[left]>arr[right])
+        if (arr[right]<arr[left])
         {
             cnt += (mid - left + 1);
             temp.push_back(arr[right]);
