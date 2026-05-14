@@ -50,6 +50,8 @@ pair<int, int> firstLastPosition(vector<int> arr, int x)
     return {lb, upperBound(arr, x) - 1};
 }
 
+
+
 int main()
 {
     vector<int> arr = {2, 5, 6, 8, 10, 10, 10, 10, 14, 16, 18, 32};
