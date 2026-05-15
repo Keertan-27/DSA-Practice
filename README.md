@@ -7,8 +7,8 @@ Current focus: building strong problem-solving foundations topic by topic.
 
 - [Array](Array)
 - [Basic](Basic)
-- [Sorting](Merge)
-- [Binary Search](BinarySearch)
+- [Sorting](Sorting)
+- [Binary Search](Binary_Search)
 
 ## How To Compile And Run
 
