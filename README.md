@@ -31,9 +31,9 @@ Track progress with checkboxes as you continue full DSA.
 
 ### Core Topics
 
-- [x] Arrays (started)
+- [x] Arrays
 - [ ] Strings
-- [x] Binary Search
+- [x] Binary Search (In Progress)
 - [ ] Sorting Techniques
 - [ ] Recursion
 - [ ] Hashing
