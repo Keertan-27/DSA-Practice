@@ -7,43 +7,8 @@ Current focus: building strong problem-solving foundations topic by topic.
 
 - [Array](Array)
 - [Basic](Basic)
-
-## Files Added So Far
-
-### Array
-
-- [Array/00test.cpp](Array/00test.cpp)
-- [Array/01secondLargest.cpp](Array/01secondLargest.cpp)
-- [Array/02moveZerotoLast.cpp](Array/02moveZerotoLast.cpp)
-- [Array/03removeDuplicate.cpp](Array/03removeDuplicate.cpp)
-- [Array/04largestNumber.cpp](Array/04largestNumber.cpp)
-- [Array/05linearSearch.cpp](Array/05linearSearch.cpp)
-- [Array/06MaxconsecutiveOnce.cpp](Array/06MaxconsecutiveOnce.cpp)
-- [Array/07appearingOnceOnly.cpp](Array/07appearingOnceOnly.cpp)
-- [Array/08rotateArray.cpp](Array/08rotateArray.cpp)
-- [Array/09intersectionArray.cpp](Array/09intersectionArray.cpp)
-- [Array/10unionArray.cpp](Array/10unionArray.cpp)
-- [Array/10unionArray2.cpp](Array/10unionArray2.cpp)
-- [Array/11findingMissingNumber.cpp](Array/11findingMissingNumber.cpp)
-- [Array/12longestSubarraySumK.cpp](Array/12longestSubarraySumK.cpp)
-- [Array/13sumOfTwoNumbers.cpp](Array/13sumOfTwoNumbers.cpp)
-- [Array/14sortArrayHave012.cpp](Array/14sortArrayHave012.cpp)
-- [Array/15returnMaxLenNum.cpp](Array/15returnMaxLenNum.cpp)
-- [Array/16maxSubArraySum.cpp](Array/16maxSubArraySum.cpp)
-- [Array/17reaarangeArrBasedOnSign.cpp](Array/17reaarangeArrBasedOnSign.cpp)
-- [Array/17rearrangeArryOnSignUnequal.cpp](Array/17rearrangeArryOnSignUnequal.cpp)
-- [Array/18buySellStock.cpp](Array/18buySellStock.cpp)
-- [Array/19NextpermutaionArray.cpp](Array/19NextpermutaionArray.cpp)
-- [Array/20leadersInArray.cpp](Array/20leadersInArray.cpp)
-- [Array/21longestConsecutiveCount.cpp](Array/21longestConsecutiveCount.cpp)
-- [Array/22setZeroTwoDArray.cpp](Array/22setZeroTwoDArray.cpp)
-- [Array/23rotateMatrixBy90Degree.cpp](Array/23rotateMatrixBy90Degree.cpp)
-
-### Basic
-
-- [Basic/Hello.cpp](Basic/Hello.cpp)
-- [Basic/numbers.cpp](Basic/numbers.cpp)
-- [Basic/pattenrs.cpp](Basic/pattenrs.cpp)
+- [Sorting](Merge)
+- [Binary Search](BinarySearch)
 
 ## How To Compile And Run
 
@@ -68,7 +33,7 @@ Track progress with checkboxes as you continue full DSA.
 
 - [x] Arrays (started)
 - [ ] Strings
-- [ ] Binary Search
+- [x] Binary Search
 - [ ] Sorting Techniques
 - [ ] Recursion
 - [ ] Hashing
@@ -119,7 +84,7 @@ Use this section to maintain consistency.
 
 - Target: 2 to 5 problems/day
 - Mix: 1 revision + 1 new pattern minimum
-- Weekly review: redo weak problems without seeing solution
+- Weekly review: redo weak problems without seeing the solution
 
 ### Week Template
 
