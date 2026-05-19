@@ -25,7 +25,7 @@ int agressiveCows(vector<int> arr, int cows)
 
         if (cntCow >= cows)
         {
-            low = mid + 1;
+            low = mid + 1
         }
         else
         {
