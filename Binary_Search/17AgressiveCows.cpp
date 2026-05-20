@@ -27,10 +27,6 @@ int agressiveCows(vector<int> arr, int cows)
         {
             low = mid + 1;
         }
-        else
-        {
-            high = mid - 1;
-        }
     }
     return high;
 }
