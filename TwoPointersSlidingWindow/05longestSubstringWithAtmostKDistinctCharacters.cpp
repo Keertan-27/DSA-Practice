@@ -7,7 +7,7 @@ int longestSubstringWithAtmostKCharacter(string s, int K)
 {
     int right = 0, left = 0;
     int maxLen=0;
-    map<char, int> mp;
+    unordered_map <char, int> mp;
     while (right<s.size())
     {
         mp[s[right]]++;
