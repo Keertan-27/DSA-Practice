@@ -57,10 +57,37 @@ int longestRepeatingCharWithKRepBetter(string s, int K)
     return maxLen;
 }
 
+int longestRepeatingCharWithKRepOptimal(string s, int K)
+{
+    int maxLen = 0;
+    int maxfreq = 0;
+    int left = 0, right = 0;
+    int hasArray[26] = {0};
+    while (right < s.length())
+    {
+        hasArray[s[right] - 'A']++;
+        maxfreq = max(maxfreq, hasArray[s[right] - 'A']);
+
+        if ((right - left + 1) - maxfreq > K)
+        {
+            hasArray[s[left] - 'A']--;
+            left++;
+        }
+
+        if ((right - left + 1) - maxfreq <= K)
+        {
+            maxLen = max(maxLen, right - left + 1);
+        }
+        right++;
+    }
+
+    return maxLen;
+}
+
 int main()
 {
     string s = "AABABBA";
-    int ans = longestRepeatingCharWithKRepBetter(s, 2);
+    int ans = longestRepeatingCharWithKRepOptimal(s, 2);
     cout << ans;
     return 0;
 }
