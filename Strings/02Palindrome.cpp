@@ -13,7 +13,7 @@ bool isPalindrome(string s)
 // more faster
 bool isAlphaNumeric(char ch)
 {
-    if ((ch >= 0 && ch <= 9) || tolower(ch > 'a' && ch < 'z'))
+    if ((ch >= '0' && ch <= '9') || tolower(ch) >= 'a' && tolower(ch) <= 'z')
         return true;
 
     return false;
@@ -24,10 +24,23 @@ bool isPalindromeConditions(string s)
 
     while (left < right)
     {
+        if (!isAlphaNumeric(s[left]))
+        {
+            left++;
+            continue;
+        }
+        if (!isAlphaNumeric(s[right]))
+        {
+            right--;
+            continue;
+        }
+
         if (tolower(s[left]) != tolower(s[right]))
             return false;
+
         left++, right--;
     }
+
     return true;
 }
 int main()
