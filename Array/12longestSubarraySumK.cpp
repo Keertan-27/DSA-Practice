@@ -32,9 +32,9 @@ int longestsubarrayWithSumKBrut(vector<int> &arr, int Ksum)
     int len = 0;
     for (int i = 0; i < n; i++)
     {
+        int sum = 0;
         for (int j = i; j < n; j++)
         {
-            int sum = 0;
             sum += arr[j];
 
             if (sum == Ksum)
