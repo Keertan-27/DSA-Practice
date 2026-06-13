@@ -22,6 +22,27 @@ vector<int> nextGreaterElement(vector<int> arr)
     }
     return ans;
 }
+
+vector<int> nextGreaterElementOptimal(vector<int> arr)
+{
+    int n = arr.size();
+    vector<int> ans(n, -1);
+    stack <int> st;
+    for (int i = 2*n -1; i >= 0; i--)
+    {
+        int idx = i%n;
+        while (!st.empty() && arr[idx] >= st.top())
+            st.pop();
+        if(i<n)
+        {
+            if (!st.empty())
+                ans[i] = st.top();
+        }
+        st.push(arr[idx]);
+        
+    }
+    return ans;
+}
 int main()
 {
     vector<int> arr = {1, 6, 0, 8, 2, 4, 3};
