@@ -32,16 +32,16 @@ Track progress with checkboxes as you continue full DSA.
 ### Core Topics
 
 - [x] Arrays
-- [ ] Strings
-- [x] Binary Search (In Progress)
+- [x] Strings
+- [x] Binary Search
 - [ ] Sorting Techniques
 - [ ] Recursion
 - [ ] Hashing
 - [ ] Linked List
-- [ ] Stack and Queue
-- [ ] Sliding Window and Two Pointers
+- [x] Stack and Queue
+- [x] Sliding Window and Two Pointers
 - [ ] Greedy Algorithms
-- [ ] Binary Trees
+- [x] Binary Trees (In progress)
 - [ ] Binary Search Trees
 - [ ] Heaps / Priority Queue
 - [ ] Tries
