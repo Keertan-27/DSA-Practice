@@ -44,9 +44,31 @@ int largestRectangleInHistogram(vector<int> arr)
     return maxi;
 }
 
+int largestRectangleInHistogramOptimal(vector<int> arr)
+{
+    int maxi = 0;
+    stack<int> st;
+    int n = arr.size();
+    for (int i = 0; i <= n; i++)
+    {
+        while (!st.empty() && (i == n || arr[st.top()] >= arr[i]))
+        {
+            int element = arr[st.top()];
+            st.pop();
+            int nse = i;
+            int pse = st.empty() ? -1 : st.top();
+            int width = nse - pse - 1;
+            maxi = max(maxi, element*width);
+        }
+        
+        st.push(i);
+    }
+    
+    return maxi;
+}
 int main()
 {
-    vector<int> arr = {2,4};
+    vector<int> arr = {2, 1, 5, 6, 2, 3};
     int ans = largestRectangleInHistogram(arr);
     cout<<ans;
     return 0;
