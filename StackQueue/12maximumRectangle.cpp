@@ -29,14 +29,14 @@ int maxiRectangleInHistogram(vector<vector<char>> matrix)
     if (matrix.empty())
         return 0;
     
-    int row = matrix.size();
-    int col = matrix[0].size();
+    int rows = matrix.size();
+    int cols = matrix[0].size();
     int maxArea = 0;
-    vector<int> heights(col, 0);
+    vector<int> heights(cols, 0);
     
-    for (int i = 0; i < row; i++)
+    for (int i = 0; i < rows; i++)
     {
-        for (int j = 0; j < col; j++)
+        for (int j = 0; j < cols; j++)
         {
             if (matrix[i][j] == '1')
                 heights[j]++;
