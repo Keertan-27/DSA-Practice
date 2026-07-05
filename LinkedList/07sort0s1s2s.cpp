@@ -78,7 +78,12 @@ Node *sortZeroOnceTwos(Node *head)
     one->next = twosHead->next;
     two->next = nullptr;
 
-    return zeroHead->next;
+    Node* newNode = zeroHead->next;
+    delete zeroHead;
+    delete oneHead;
+    delete twosHead;
+
+    return newNode;
 }
 int main()
 {
