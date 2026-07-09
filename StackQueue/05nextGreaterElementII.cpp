@@ -46,7 +46,8 @@ vector<int> nextGreaterElementOptimal(vector<int> arr)
 int main()
 {
     vector<int> arr = {1, 6, 0, 8, 2, 4, 3};
-    vector<int> ans = nextGreaterElement(arr);
+    vector<int> arr1 = {1, 2, 1};
+    vector<int> ans = nextGreaterElement(arr1);
 
     for (int x : ans)
     {
