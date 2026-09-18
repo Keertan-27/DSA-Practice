@@ -36,8 +36,8 @@ Track progress with checkboxes as you continue full DSA.
 - [x] Binary Search
 - [ ] Sorting Techniques
 - [ ] Recursion
-- [ ] Hashing
-- [ ] Linked List
+- [x] Hashing
+- [x] Linked List
 - [x] Stack and Queue
 - [x] Sliding Window and Two Pointers
 - [ ] Greedy Algorithms
@@ -46,7 +46,7 @@ Track progress with checkboxes as you continue full DSA.
 - [ ] Heaps / Priority Queue
 - [ ] Tries
 - [ ] Graphs
-- [ ] Dynamic Programming
+- [x] Dynamic Programming
 - [ ] Bit Manipulation
 
 ### Advanced / Interview-Level Topics
